@@ -29,86 +29,104 @@ import pandas as pd
 df = pd.read_csv("SAMPLEDS - Sheet1.csv")
 df.shape
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/6eaa6cfe-3d00-41b8-936b-badc33c4c1d0)
+<img width="74" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/a008f8d4-8982-4828-8a2d-ec333f890316">
+
 ```
 df.head()
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/8fd44750-4fd9-4cd6-9c03-593fbebd773a)
+<img width="241" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/92b5047f-e3cb-465e-a261-420c7b6c8543">
+
 ```
 df.tail()
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/3787a1e0-4e52-4175-bca5-4c4496db2686)
+<img width="235" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/3ba51905-6aef-4380-8c0d-17b405ad8780">
+
 ```
 df.dropna(how='any').shape
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/19cf1215-2746-4ae0-adea-8830805951a4)
+<img width="64" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/09ceaa8a-c4a1-4571-a776-4059ea391a98">
+
 ```
 x=df.dropna(how='any')
 x
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/6e3a0042-9fd3-4cd0-a036-a86227a03941)
+<img width="240" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/3d77557e-9e67-40e5-9d73-d50db9dcecc5">
+
 ```
 df.dropna(how='all').shape
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/fa31be01-7b43-4aaf-8cc3-7d7b8471487c)
+<img width="47" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/4be385c2-71c6-466b-95a5-47cdfa190e14">
+
 ```
 tot=df.dropna(subset=['TOTAL'],how='any')
 tot
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/4228748b-9458-4e81-ad23-78ac068442f9)
+<img width="234" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/7ef47a18-f757-4f1f-b5f6-e47270af3748">
+
 ```
 tot=df.dropna(subset=['M1','M2','M3','M4'],how='any')
 tot
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/6c089800-de78-45d9-ac80-62a5970608cd)
+<img width="232" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/b8cd8ef7-d59d-4770-9d50-8d05c2e91385">
+
 ```
 df.fillna(0)
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/46478637-5bb7-4975-b3d7-8d6a5a7b52a0)
+<img width="238" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/0caa1100-5d89-4af3-9383-4b4a5e0bfbd1">
+
 ```
 df.fillna(method='ffill')
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/deea7dc4-f8e1-407c-9200-406b1482374f)
+<img width="234" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/f502dd8b-dd3f-46d7-8548-dee8d7dc6f28">
+
 ```
 df.fillna(method='bfill')
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/0efc5712-bdcf-4f05-9a94-4cbb9e236719)
+<img width="233" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/c6af1570-9ebc-4d1d-8cdb-e0118a11598a">
+
 ```
 mn=df.TOTAL.mean()
 mn
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/250fe794-a40d-4223-8ecf-aa97389639f3)
+<img width="43" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/c46f8bee-3c60-44ba-91d2-a74d43bb0af3">
+
 ```
 df.TOTAL.fillna(mn,inplace=True)
 df
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/091ecdd4-6ba4-49d5-ba0b-7ddf4868e396)
+<img width="241" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/707bd271-48bd-41a6-b048-107100020d44">
+
 ```
 df.duplicated()
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/48c4d219-18e4-4563-9cce-57dd86de1a7a)
+<img width="50" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/120e896a-6112-41fb-bc6d-382d26cdeb72">
+
 ```
 df.drop_duplicates(inplace=True)
 df
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/70294b50-5498-4b6b-bd75-04c5d6a9f544)
+<img width="237" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/d3436d80-4b8d-4736-9954-248f3c4d0fe1">
+
 ```
 df['cd']=pd.to_datetime(df['DOB'])
 df
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/94661451-6a91-4c87-b073-1b6868135b7c)
+<img width="238" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/95912b34-d536-420f-8583-077f5641ae90">
+
 ```
 for x in df.index:
   if df.loc[x,"AVG"]>100:
     df.drop(x,inplace=True)
 df
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/69c408f8-82d6-4e6f-a491-9a171aac300e)
+<img width="234" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/39ad16fa-7b47-4149-8184-c38625350e49">
+
 ```
 import seaborn as sns
 sns.heatmap(df.isnull(),yticklabels=False,annot=True)
 ```
-![image](https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/a1f17f1e-80f1-4514-8e29-331c260d531d)
+<img width="190" alt="image" src="https://github.com/JoyceBeulah/ODD2023-Datascience-Ex01/assets/118343698/25ec35d3-116d-43bd-8b1e-45d0f495a845">
+
 
 ## RESULT
 Thus,the given data is read,cleansed and the cleaned data is saved into the file.
